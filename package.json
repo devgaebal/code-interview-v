@@ -1,0 +1,26 @@
+{
+  "name": "xml-validator",
+  "version": "1.0.0",
+  "description": "Check if an XML is valid per Vingle's rules",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "tsc && jest"
+  },
+  "author": "Vingle",
+  "dependencies": {
+    "@types/xml-parser": "^1.2.29",
+    "dom-parser": "^0.1.5",
+    "fast-xml-parser": "^3.10.0",
+    "jest": "^21.2.1",
+    "xml-parser": "^1.2.1"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testRegex": ".*_spec\\.js$"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
