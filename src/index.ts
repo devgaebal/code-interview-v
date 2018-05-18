@@ -47,14 +47,12 @@ export const isValidXML = xmlString => {
     }
     // add temporary roots (xmlparser can't handle multiple roots...)
     const parsedXML = xmlparser('<__TEMPROOT__>' + xmlString + '</__TEMPROOT__>');
-    
     traverse(parsedXML.root);
   }
   catch(e) {
     return false;
   }
   return true;
-  // TODO: FILL ME
 };
 
 export function traverse(
@@ -62,7 +60,6 @@ export function traverse(
   parentNode?: xmlparser.Node,
   depth: number = 0,
 ) {
-  console.log('node:', node);
   // 1. A node cannot contain a node with the same tag
   if (parentNode && parentNode.name == node.name) {
     throw new Error("A node cannot contain a node with the same tag");
