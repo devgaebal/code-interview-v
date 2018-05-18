@@ -4,7 +4,7 @@
   "description": "Check if an XML is valid per Vingle's rules",
   "main": "src/index.js",
   "scripts": {
-    "test": "tsc && jest"
+    "test": "jest"
   },
   "author": "Vingle",
   "dependencies": {
@@ -18,6 +18,9 @@
     "roots": [
       "<rootDir>/tests"
     ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
     "testRegex": ".*_spec\\.js$"
   },
   "devDependencies": {
